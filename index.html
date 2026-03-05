@@ -4,55 +4,165 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Herní Kavárna Praha 4</title>
+
+  <!-- favicon (JS will set it) -->
+  <link id="favicon" rel="icon" type="image/svg+xml"/>
+
   <link rel="stylesheet" href="style.css"/>
 </head>
+
 <body data-page="home">
-  <div class="container">
-    <div class="nav">
-      <div class="left">
-        <div style="font-weight:900">🎮 Herní Kavárna Praha 4</div>
-        <div class="badge">8× PC • 2× PS • 2× VR</div>
-      </div>
-      <div class="links">
-        <a class="btn secondary" href="index.html">Home</a>
-        <a class="btn secondary" href="menu.html">Menu</a>
-        <a class="btn secondary" href="booking.html">Rezervace</a>
-        <a class="btn secondary" href="admin.html">Admin</a>
-        <span class="badge" data-cart-badge>Košík: 0</span>
-      </div>
+  <div class="bg-glow"></div>
+
+  <header class="topbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="logo_transparent.png" alt="Herní Kavárna Praha 4">
+        <div class="brand-text">
+          <div class="brand-name">Herní Kavárna Praha 4</div>
+          <div class="brand-sub">8× PC • 2× PlayStation • 2× VR</div>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a class="nav-link" href="menu.html">Menu</a>
+        <a class="nav-link" href="booking.html">Rezervace</a>
+        <a class="nav-link" href="admin.html">Admin</a>
+        <span class="pill" data-cart-badge>Košík: 0</span>
+        <button id="themeToggle" class="btn secondary" type="button" title="Light/Dark">🌙</button>
+      </nav>
     </div>
+  </header>
 
-    <h1 class="h1">Gaming + jídlo přímo do zóny</h1>
-    <p class="p">Rezervuj PC/PS/VR, objednej jídlo a my ho připravíme a přineseme přímo k tvému místu.</p>
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="pill">🔥 Nově: jídlo přímo do zóny</div>
+        <h1 class="hero-title">Gaming café, které vypadá i funguje jako opravdové.</h1>
+        <p class="hero-text">
+          Rezervuj PC/PS/VR, vyber balíček a objednej jídlo. My ho připravíme a přineseme přímo k tvému místu.
+        </p>
 
-    <div class="kpi">
-      <div class="k"><div class="n" id="kpiBookings">0</div><div class="t">Rezervace celkem</div></div>
-      <div class="k"><div class="n" id="kpiOrders">0</div><div class="t">Objednávky jídla</div></div>
-      <div class="k"><div class="n">Praha 4</div><div class="t">Lokace (projekt)</div></div>
-    </div>
+        <div class="hero-cta">
+          <a class="btn" href="booking.html">Rezervovat teď</a>
+          <a class="btn secondary" href="menu.html">Prohlédnout menu</a>
+        </div>
 
-    <div class="hr"></div>
-
-    <h2 style="margin:0 0 10px">🔥 Top balíčky</h2>
-    <div class="grid cols-2" id="dealsBox"></div>
-
-    <div class="hr"></div>
-
-    <div class="grid cols-2">
-      <div class="card">
-        <h2 style="margin:0 0 6px">🍜 Jídlo</h2>
-        <p class="p">Ramen, gyoza, mini pizza, loaded fries…</p>
-        <a class="btn" href="menu.html">Otevřít menu</a>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">144 Hz+</div>
+            <div class="stat-label">Monitory</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">RGB</div>
+            <div class="stat-label">Atmosféra</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">Turnaje</div>
+            <div class="stat-label">Víkendy</div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <h2 style="margin:0 0 6px">📅 Rezervace</h2>
-        <p class="p">Vyber zónu, čas, balíček a přidej jídlo do košíku.</p>
-        <a class="btn" href="booking.html">Rezervovat</a>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <div>
+              <div class="card-title">Top balíčky</div>
+              <div class="card-sub">nejčastější dealy</div>
+            </div>
+            <a class="link" href="booking.html">Otevřít</a>
+          </div>
+
+          <div id="dealsBox" class="stack"></div>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- SECTIONS -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Zóny</h2>
+        <p class="section-sub">Vyber si styl hraní</p>
+      </div>
+
+      <div class="grid cols-3">
+        <div class="card pro-card">
+          <div class="icon">🖥️</div>
+          <div class="card-title">PC zóna</div>
+          <div class="card-sub">Kompetitivní hraní + nejlepší výkon.</div>
+          <div class="mini-row">
+            <span class="pill">8 míst</span>
+            <span class="pill">FPS ready</span>
+          </div>
+        </div>
+
+        <div class="card pro-card">
+          <div class="icon">🎮</div>
+          <div class="card-title">PlayStation lounge</div>
+          <div class="card-sub">Pohodlí na gauči, ideální pro duo / squad.</div>
+          <div class="mini-row">
+            <span class="pill">2 zóny</span>
+            <span class="pill">Couch co-op</span>
+          </div>
+        </div>
+
+        <div class="card pro-card">
+          <div class="icon">🥽</div>
+          <div class="card-title">VR room</div>
+          <div class="card-sub">Zážitek pro party, párty a návštěvy.</div>
+          <div class="mini-row">
+            <span class="pill">2× PS VR2</span>
+            <span class="pill">3×3 m</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Jak to funguje</h2>
+        <p class="section-sub">Jednoduše ve 3 krocích</p>
+      </div>
+
+      <div class="grid cols-3">
+        <div class="card pro-card">
+          <div class="step">1</div>
+          <div class="card-title">Vyber zónu & čas</div>
+          <div class="card-sub">PC / PS / VR + datum a hodina.</div>
+        </div>
+        <div class="card pro-card">
+          <div class="step">2</div>
+          <div class="card-title">Přidej balíček</div>
+          <div class="card-sub">Noční hraní, maraton, VR session…</div>
+        </div>
+        <div class="card pro-card">
+          <div class="step">3</div>
+          <div class="card-title">Objednej jídlo</div>
+          <div class="card-sub">Uloží se k rezervaci a přineseme do zóny.</div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div>
+          <div class="callout-title">Chceš to zkusit hned?</div>
+          <div class="callout-sub">Klikni na rezervaci a udělej testovací objednávku pro projekt.</div>
+        </div>
+        <a class="btn" href="booking.html">Rezervace</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© Herní Kavárna Praha 4 (školní projekt)</div>
+      <div class="footer-links">
+        <a class="link" href="menu.html">Menu</a>
+        <a class="link" href="booking.html">Rezervace</a>
+      </div>
+    </footer>
 
     <div id="toast" class="toast" style="display:none"></div>
-  </div>
+  </main>
 
   <script src="app.js"></script>
 </body>
