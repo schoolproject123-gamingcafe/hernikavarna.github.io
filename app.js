@@ -201,13 +201,17 @@ function initMenuPage(){
   updateCartBadge();
 }
 
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded", () => {
+
+  initTheme();
+  setGamingFavicon();
 
   const page = document.body.dataset.page;
 
-  if(page==="menu"){
+  if(page === "menu"){
     initMenuPage();
   }
 
   updateCartBadge();
+
 });
