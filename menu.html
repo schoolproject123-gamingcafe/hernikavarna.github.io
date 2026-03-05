@@ -34,11 +34,25 @@
       </div>
 
       <div class="card">
-        <h2 style="margin:0 0 6px">🧾 Košík</h2>
-        <p class="p">Košík se použije při rezervaci.</p>
-        <a class="btn" href="booking.html">Přejít na rezervaci</a>
-        <button class="btn secondary" id="clearCartBtn" style="margin-left:8px">Vyčistit košík</button>
-      </div>
+  <h2 style="margin:0 0 6px">🧾 Košík</h2>
+  <p class="p">Košík se použije při rezervaci.</p>
+
+  <div class="row">
+    <a class="btn" href="booking.html">Přejít na rezervaci</a>
+    <button class="btn secondary" id="clearCartBtn">Vyčistit košík</button>
+  </div>
+
+  <div class="hr"></div>
+
+  <div id="cartList"></div>
+
+  <div class="hr"></div>
+
+  <div class="row" style="justify-content:space-between">
+    <div class="title">Celkem:</div>
+    <div class="price" id="cartTotal">0 Kč</div>
+  </div>
+</div>
     </div>
 
     <div id="toast" class="toast" style="display:none"></div>
