@@ -1,32 +1,59 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="cs">
 <head>
-<title>Herní Kavárna Praha 4</title>
-<style>
-body{
-background:#111;
-color:white;
-font-family:Arial;
-text-align:center;
-}
-
-a{
-color:cyan;
-font-size:20px;
-margin:20px;
-}
-</style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Herní Kavárna Praha 4</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
+<body data-page="home">
+  <div class="container">
+    <div class="nav">
+      <div class="left">
+        <div style="font-weight:900">🎮 Herní Kavárna Praha 4</div>
+        <div class="badge">8× PC • 2× PS • 2× VR</div>
+      </div>
+      <div class="links">
+        <a class="btn secondary" href="index.html">Home</a>
+        <a class="btn secondary" href="menu.html">Menu</a>
+        <a class="btn secondary" href="booking.html">Rezervace</a>
+        <a class="btn secondary" href="admin.html">Admin</a>
+        <span class="badge" data-cart-badge>Košík: 0</span>
+      </div>
+    </div>
 
-<body>
+    <h1 class="h1">Gaming + jídlo přímo do zóny</h1>
+    <p class="p">Rezervuj PC/PS/VR, objednej jídlo a my ho připravíme a přineseme přímo k tvému místu.</p>
 
-<h1>🎮 Herní Kavárna Praha 4</h1>
+    <div class="kpi">
+      <div class="k"><div class="n" id="kpiBookings">0</div><div class="t">Rezervace celkem</div></div>
+      <div class="k"><div class="n" id="kpiOrders">0</div><div class="t">Objednávky jídla</div></div>
+      <div class="k"><div class="n">Praha 4</div><div class="t">Lokace (projekt)</div></div>
+    </div>
 
-<p>Nejlepší gaming café v Praze 4</p>
+    <div class="hr"></div>
 
-<a href="#">Menu</a>
-<a href="#">Rezervace</a>
-<a href="#">Balíčky</a>
+    <h2 style="margin:0 0 10px">🔥 Top balíčky</h2>
+    <div class="grid cols-2" id="dealsBox"></div>
 
+    <div class="hr"></div>
+
+    <div class="grid cols-2">
+      <div class="card">
+        <h2 style="margin:0 0 6px">🍜 Jídlo</h2>
+        <p class="p">Ramen, gyoza, mini pizza, loaded fries…</p>
+        <a class="btn" href="menu.html">Otevřít menu</a>
+      </div>
+      <div class="card">
+        <h2 style="margin:0 0 6px">📅 Rezervace</h2>
+        <p class="p">Vyber zónu, čas, balíček a přidej jídlo do košíku.</p>
+        <a class="btn" href="booking.html">Rezervovat</a>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" style="display:none"></div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
