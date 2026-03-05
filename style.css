@@ -93,30 +93,45 @@ body{
   flex-wrap:wrap;
 }
 
+/* NAV BUTTONS (match screenshot) */
 .navbtn{
-  padding:10px 14px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:10px 16px;
   border-radius:14px;
+
   border:1px solid var(--stroke);
-  background:rgba(255,255,255,.03);
+  background:rgba(255,255,255,.04);
+
   color:var(--text);
   text-decoration:none;
   font-weight:800;
+
+  transition:transform .12s ease, background .12s ease, border-color .12s ease;
 }
+
 .navbtn:hover{
   transform:translateY(-1px);
-  box-shadow:var(--shadow);
+  background:rgba(255,255,255,.07);
+  border-color:rgba(160,200,255,.35);
 }
-.navbtn.ghost{ background:transparent; }
 
-.select{
+/* theme button slightly smaller like screenshot */
+.navbtn.ghost{
   padding:10px 12px;
-  border-radius:14px;
-  border:1px solid var(--stroke);
-  background:rgba(255,255,255,.03);
-  color:var(--text);
-  outline:none;
+  min-width:44px;
 }
 
+/* Optional: make the current page button look “selected” */
+body[data-page="home"]  .nav-actions a[href="index.html"],
+body[data-page="menu"]  .nav-actions a[href="menu.html"],
+body[data-page="booking"] .nav-actions a[href="booking.html"],
+body[data-page="admin"] .nav-actions a[href="admin.html"]{
+  background:rgba(255,255,255,.09);
+  border-color:rgba(160,200,255,.45);
+}
 /* ===== Headings / text ===== */
 .h1{
   margin:18px 0 8px;
