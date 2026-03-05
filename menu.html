@@ -4,58 +4,70 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Menu • Herní Kavárna Praha 4</title>
+
+  <link id="favicon" rel="icon" type="image/svg+xml">
   <link rel="stylesheet" href="style.css"/>
 </head>
+
 <body data-page="menu">
   <div class="container">
+
     <div class="nav">
       <div class="left">
-        <div style="font-weight:900">🍜 Menu</div>
+        <div style="font-weight:900">🍜 <span data-i18n="menu">Menu</span></div>
         <div class="badge">Objednávka půjde do rezervace</div>
       </div>
+
       <div class="links">
-        <a class="btn secondary" href="index.html">Home</a>
-        <a class="btn secondary" href="menu.html">Menu</a>
-        <a class="btn secondary" href="booking.html">Rezervace</a>
-        <a class="btn secondary" href="admin.html">Admin</a>
+        <a class="btn secondary" href="index.html" data-i18n="home">Home</a>
+        <a class="btn secondary" href="menu.html" data-i18n="menu">Menu</a>
+        <a class="btn secondary" href="booking.html" data-i18n="booking">Rezervace</a>
+        <a class="btn secondary" href="admin.html" data-i18n="admin">Admin</a>
+
         <span class="badge" data-cart-badge>Košík: 0</span>
+
+        <select id="langSelect" class="input" style="width:auto; padding:8px 10px">
+          <option value="cs">CZ</option>
+          <option value="en">EN</option>
+          <option value="uk">UA</option>
+          <option value="vi">VI</option>
+        </select>
+
+        <button id="themeToggle" class="btn secondary" type="button">🌙</button>
       </div>
     </div>
 
-    <h1 class="h1">Menu</h1>
-    <p class="p">Vyber jídlo, přidej do košíku a potom udělej rezervaci (přineseme do zóny).</p>
+    <h1 class="h1" data-i18n="menu">Menu</h1>
+    <p class="p">Vyber jídlo a přidej do košíku. Košík se použije při rezervaci.</p>
 
     <div class="grid cols-2">
       <div class="card">
-        <label>Kategorie</label>
-        <select id="categorySelect"></select>
         <div class="hr"></div>
         <div class="grid" id="menuList"></div>
       </div>
 
       <div class="card">
-  <h2 style="margin:0 0 6px">🧾 Košík</h2>
-  <p class="p">Košík se použije při rezervaci.</p>
+        <h2 style="margin:0 0 6px">🧾 <span data-i18n="cart">Košík</span></h2>
+        <p class="p">Košík se použije při rezervaci.</p>
 
-  <div class="row">
-    <a class="btn" href="booking.html">Přejít na rezervaci</a>
-    <button class="btn secondary" id="clearCartBtn">Vyčistit košík</button>
-  </div>
+        <div class="row">
+          <a class="btn" href="booking.html" data-i18n="goBooking">Přejít na rezervaci</a>
+          <button class="btn secondary" id="clearCartBtn" type="button" data-i18n="clearCart">Vyčistit košík</button>
+        </div>
 
-  <div class="hr"></div>
+        <div class="hr"></div>
 
-  <div id="cartList"></div>
+        <div id="cartList"></div>
 
-  <div class="hr"></div>
+        <div class="hr"></div>
 
-  <div class="row" style="justify-content:space-between">
-    <div class="title">Celkem:</div>
-    <div class="price" id="cartTotal">0 Kč</div>
-  </div>
-</div>
+        <div class="row" style="justify-content:space-between">
+          <div class="price" data-i18n="total">Celkem:</div>
+          <div class="price" id="cartTotal">0 Kč</div>
+        </div>
+      </div>
     </div>
 
-    <div id="toast" class="toast" style="display:none"></div>
   </div>
 
   <script src="app.js"></script>
