@@ -343,11 +343,17 @@ label.small{ display:block; margin:10px 0 6px; }
   margin-top:20px;
 }
 .bigcard{
-  padding:18px;
+  padding:28px;
   border-radius:18px;
+
   background:var(--card);
   border:1px solid var(--stroke);
-  box-shadow:var(--shadow);
+
+  min-height:160px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
 }
 .bigcard-title{
   font-size:22px;
