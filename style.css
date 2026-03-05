@@ -402,3 +402,29 @@ label.small{ display:block; margin:10px 0 6px; }
   flex-direction:column;
   gap:12px;
 }
+/* FORCE cart + menu lists to stack vertically */
+#cartList,
+#menuList{
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 12px !important;
+}
+
+/* each item full width */
+#cartList .item,
+#menuList .item{
+  width: 100% !important;
+}
+
+/* prevent any float/inline weirdness */
+#cartList .item,
+#menuList .item{
+  float: none !important;
+  display: flex !important;
+}
+
+/* keep the inside layout clean */
+#cartList .item{
+  justify-content: space-between !important;
+  align-items: center !important;
+}
