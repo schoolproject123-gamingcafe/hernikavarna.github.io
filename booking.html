@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Rezervace • Herní Kavárna Praha 4</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body data-page="booking">
+  <div class="container">
+    <div class="nav">
+      <div class="left">
+        <div style="font-weight:900">📅 Rezervace</div>
+        <div class="badge">PC/PS/VR + jídlo do zóny</div>
+      </div>
+      <div class="links">
+        <a class="btn secondary" href="index.html">Home</a>
+        <a class="btn secondary" href="menu.html">Menu</a>
+        <a class="btn secondary" href="booking.html">Rezervace</a>
+        <a class="btn secondary" href="admin.html">Admin</a>
+        <span class="badge" data-cart-badge>Košík: 0</span>
+      </div>
+    </div>
+
+    <h1 class="h1">Rezervuj a objednej jídlo</h1>
+    <p class="p">Vyber zónu a čas. Jídlo z košíku připravíme a přineseme přímo do tvé zóny.</p>
+
+    <div class="grid cols-2">
+      <div class="card">
+        <h2 style="margin:0 0 10px">👤 Kontakt</h2>
+        <div class="grid" style="gap:10px">
+          <div>
+            <label>Jméno</label>
+            <input class="input" id="name" placeholder="např. Milan"/>
+          </div>
+          <div>
+            <label>Email</label>
+            <input class="input" id="email" placeholder="např. milan@email.cz"/>
+          </div>
+          <div>
+            <label>Telefon (volitelné)</label>
+            <input class="input" id="phone" placeholder="+420 ..."/>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <h2 style="margin:0 0 10px">🎮 Zóna</h2>
+        <div class="grid" style="gap:10px">
+          <div>
+            <label>Typ zóny</label>
+            <select id="zoneType"></select>
+          </div>
+          <div>
+            <label>Číslo</label>
+            <select id="zoneNumber"></select>
+          </div>
+          <div>
+            <label>Datum</label>
+            <input class="input" id="date" type="date"/>
+          </div>
+          <div>
+            <label>Čas</label>
+            <input class="input" id="time" type="time"/>
+          </div>
+          <div>
+            <label>Balíček (dealy)</label>
+            <select id="dealSelect"></select>
+            <div class="small">Bez balíčku = default 60 minut.</div>
+          </div>
+          <div>
+            <label>Poznámka (jídlo do zóny)</label>
+            <input class="input" id="notes" value="Jídlo připravíme a přineseme přímo do zóny."/>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <button class="btn" id="submitBtn">Vytvořit rezervaci</button>
+        <div id="toast" class="toast" style="display:none"></div>
+      </div>
+
+      <div class="card">
+        <h2 style="margin:0 0 10px">🧾 Košík (půjde do rezervace)</h2>
+        <div id="cartList"></div>
+        <div class="hr"></div>
+        <div class="row" style="justify-content:space-between">
+          <div class="title">Jídlo celkem:</div>
+          <div class="price" id="cartTotal">0 Kč</div>
+        </div>
+        <div class="hr"></div>
+        <div class="row">
+          <a class="btn secondary" href="menu.html">Přidat jídlo</a>
+          <button class="btn secondary" id="clearCartBtn">Vyčistit košík</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
