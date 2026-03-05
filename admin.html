@@ -15,7 +15,7 @@
     <div class="nav">
       <div class="left">
         <div style="font-weight:900">🛠 <span data-i18n="admin">Admin</span></div>
-        <div class="badge">Školní projekt</div>
+        <div class="badge">Rezervace + jídlo</div>
       </div>
 
       <div class="links">
@@ -38,7 +38,34 @@
     </div>
 
     <h1 class="h1" data-i18n="admin">Admin</h1>
-    <p class="p">Admin stránka – můžeš sem později dát výpis objednávek / rezervací.</p>
+    <p class="p">Tady vidíš všechny rezervace a co má být přineseno do zóny.</p>
+
+    <div class="card">
+      <div class="row" style="justify-content:space-between">
+        <b>Seznam rezervací</b>
+        <button class="btn secondary" id="wipeBookingsBtn" type="button">Smazat vše</button>
+      </div>
+
+      <div class="hr"></div>
+
+      <div style="overflow:auto">
+        <table style="width:100%; border-collapse:collapse">
+          <thead>
+            <tr>
+              <th style="text-align:left; padding:8px; border-bottom:1px solid var(--border)">Zákazník</th>
+              <th style="text-align:left; padding:8px; border-bottom:1px solid var(--border)">Zóna</th>
+              <th style="text-align:left; padding:8px; border-bottom:1px solid var(--border)">Čas</th>
+              <th style="text-align:left; padding:8px; border-bottom:1px solid var(--border)">Balíček</th>
+              <th style="text-align:left; padding:8px; border-bottom:1px solid var(--border)">Jídlo</th>
+              <th style="text-align:left; padding:8px; border-bottom:1px solid var(--border)">Status</th>
+            </tr>
+          </thead>
+          <tbody id="adminBody"></tbody>
+        </table>
+      </div>
+
+      <div id="toast" class="toast"></div>
+    </div>
 
   </div>
 
