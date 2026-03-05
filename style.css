@@ -396,3 +396,16 @@ label.small{ display:block; margin:10px 0 6px; }
   .bottom{ grid-template-columns:1fr; }
   .hero-title{ font-size:36px; }
 }
+/* Cart items should go vertically (down) */
+#cartList{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+/* (optional) menu items list also vertical */
+#menuList{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
