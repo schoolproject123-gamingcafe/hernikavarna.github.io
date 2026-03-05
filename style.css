@@ -221,3 +221,20 @@ label.small{ display:block; margin:10px 0 6px; }
   background:var(--card);
   display:none;
 }
+/* FIX: keep topbar controls like the 2nd screenshot */
+.nav-actions{
+  flex-wrap:nowrap;
+}
+
+.select{
+  width:auto !important;
+  min-width:72px;
+  max-width:90px;
+  padding:10px 10px;
+}
+
+@media (max-width:900px){
+  /* on small screens it's OK to wrap */
+  .nav-actions{ flex-wrap:wrap; }
+  .select{ max-width:120px; }
+}
