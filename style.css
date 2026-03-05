@@ -356,14 +356,15 @@ label.small{ display:block; margin:10px 0 6px; }
   justify-content:space-between;
 }
 .bigcard-title{
-  font-size:22px;
+  font-size:24px;
   font-weight:900;
 }
-.bigcard-sub{
-  margin-top:6px;
-  color:var(--muted);
-}
 
+.bigcard-sub{
+  margin-top:8px;
+  color:var(--muted);
+  font-size:14px;
+}
 /* button bubble */
 .cta{
   display:inline-block;
