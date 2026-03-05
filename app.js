@@ -124,14 +124,14 @@ function initHomePage(){
   const box = document.getElementById("dealsBox");
   if(box){
     box.innerHTML = DEALS.slice(0,4).map(d => `
-      <div class="item">
-        <div>
-          <div style="font-weight:900">${d.title}</div>
-          <div class="small">${d.type} • ${d.durationMin} min • ${d.desc}</div>
-        </div>
-        <div class="price">${money(d.price)}</div>
-      </div>
-    `).join("");
+  <div class="deal">
+    <div>
+      <div class="deal-title">${d.title}</div>
+      <div class="deal-sub">${d.type} • ${d.durationMin} min • ${d.desc}</div>
+    </div>
+    <div class="deal-price">${money(d.price)}</div>
+  </div>
+`).join("");
   }
 }
 
