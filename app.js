@@ -1,4 +1,45 @@
 const CART_KEY = "hk_cart_v1";
+const THEME_KEY = "hk_theme_v1";
+
+function setTheme(theme){
+  localStorage.setItem(THEME_KEY, theme);
+  document.documentElement.setAttribute("data-theme", theme);
+  const btn = document.getElementById("themeToggle");
+  if(btn) btn.textContent = theme === "light" ? "☀️" : "🌙";
+}
+
+function initTheme(){
+  const saved = localStorage.getItem(THEME_KEY) || "dark";
+  setTheme(saved);
+
+  const btn = document.getElementById("themeToggle");
+  if(btn){
+    btn.addEventListener("click", ()=>{
+      const next = (localStorage.getItem(THEME_KEY) || "dark") === "dark" ? "light" : "dark";
+      setTheme(next);
+      setGamingFavicon(); // optional: refresh favicon on theme change
+    });
+  }
+}
+
+function setGamingFavicon(){
+  const theme = localStorage.getItem(THEME_KEY) || "dark";
+  const c = theme === "light" ? "#0077ff" : "#39c6ff";
+  const bg = theme === "light" ? "#ffffff" : "#111111";
+
+  const svg = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+    <rect width="128" height="128" rx="28" fill="${bg}"/>
+    <rect x="22" y="56" width="84" height="40" rx="16" fill="none" stroke="${c}" stroke-width="8"/>
+    <circle cx="44" cy="76" r="6" fill="${c}"/>
+    <circle cx="84" cy="76" r="6" fill="${c}"/>
+    <path d="M62 68h8v16h-8z" fill="${c}"/>
+    <path d="M58 74h16v4H58z" fill="${c}"/>
+  </svg>`;
+
+  const link = document.getElementById("favicon");
+  if(link) link.href = "data:image/svg+xml," + encodeURIComponent(svg);
+}
 
 function $(id){
   return document.getElementById(id);
