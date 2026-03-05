@@ -15,7 +15,7 @@
     <div class="nav">
       <div class="left">
         <div style="font-weight:900">🎮 Herní Kavárna Praha 4</div>
-        <div class="badge">8× PC • 2× PlayStation • 2× VR</div>
+        <div class="badge">8× PC • 2× PS • 2× VR</div>
       </div>
 
       <div class="links">
@@ -37,22 +37,46 @@
       </div>
     </div>
 
-    <h1 class="h1">Herní kavárna Praha 4</h1>
-    <p class="p">Školní projekt: Rezervace PC/PS/VR + objednávka jídla do zóny.</p>
+    <h1 class="h1" id="homeTitle">Gaming + jídlo přímo do zóny</h1>
+    <p class="p" id="homeSubtitle">Rezervuj PC/PS/VR, objednej jídlo a my ho připravíme a přineseme přímo k tvému místu.</p>
+
+    <div class="grid cols-3" id="kpiBox">
+      <div class="card">
+        <div style="font-size:26px; font-weight:900" id="kpiBookings">0</div>
+        <div class="small" id="kpiBookingsLabel">Rezervace celkem</div>
+      </div>
+      <div class="card">
+        <div style="font-size:26px; font-weight:900" id="kpiOrders">0</div>
+        <div class="small" id="kpiOrdersLabel">Objednávky jídla</div>
+      </div>
+      <div class="card">
+        <div style="font-size:26px; font-weight:900">Praha 4</div>
+        <div class="small" id="kpiLocLabel">Lokace (projekt)</div>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+
+    <h2 style="margin:0 0 10px" id="topDealsTitle">🔥 Top balíčky</h2>
+    <div class="grid cols-2" id="dealsBox"></div>
+
+    <div class="hr"></div>
 
     <div class="grid cols-2">
       <div class="card">
-        <h2 style="margin-top:0">🍜 Menu</h2>
-        <p class="p">Ramen, mini pizza, snacky, pití… Přidej do košíku.</p>
-        <a class="btn" href="menu.html">Otevřít menu</a>
+        <h2 style="margin:0 0 6px" id="foodTitle">🍜 Jídlo</h2>
+        <p class="p" id="foodSub">Ramen, gyoza, mini pizza, loaded fries…</p>
+        <a class="btn" href="menu.html" id="foodBtn">Otevřít menu</a>
       </div>
 
       <div class="card">
-        <h2 style="margin-top:0">📅 Rezervace</h2>
-        <p class="p">Vyber zónu, čas a balíček. Jídlo přineseme přímo do zóny.</p>
-        <a class="btn" href="booking.html">Rezervovat</a>
+        <h2 style="margin:0 0 6px" id="bookTitle">📅 Rezervace</h2>
+        <p class="p" id="bookSub">Vyber zónu, čas, balíček a přidej jídlo do košíku.</p>
+        <a class="btn" href="booking.html" id="bookBtn">Rezervovat</a>
       </div>
     </div>
+
+    <div id="toast" class="toast"></div>
 
   </div>
 
