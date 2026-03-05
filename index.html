@@ -1,25 +1,99 @@
-<div class="topbar">
-  <div class="brand">
-    <div class="brand-icon">🎮</div>
-    <div class="brand-name">Herní Kavárna Praha 4</div>
-    <div class="pill">8× PC • 2× PS • 2× VR</div>
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Herní Kavárna Praha 4</title>
+
+  <link id="favicon" rel="icon" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body data-page="home">
+  <div class="bg"></div>
+
+  <div class="container">
+    <!-- TOP NAV -->
+    <div class="topbar">
+      <div class="brand">
+        <div class="brand-icon">🎮</div>
+        <div class="brand-name">Herní Kavárna Praha 4</div>
+        <div class="pill">8× PC • 2× PS • 2× VR</div>
+      </div>
+
+      <div class="nav-actions">
+        <a class="navbtn" href="index.html" data-i18n="home">Home</a>
+        <a class="navbtn" href="menu.html" data-i18n="menu">Menu</a>
+        <a class="navbtn" href="booking.html" data-i18n="booking">Rezervace</a>
+        <a class="navbtn" href="admin.html" data-i18n="admin">Admin</a>
+
+        <span class="pill" data-cart-badge>Košík: 0</span>
+
+        <select id="langSelect" class="select">
+          <option value="cs">CZ</option>
+          <option value="en">EN</option>
+          <option value="uk">UA</option>
+          <option value="vi">VI</option>
+        </select>
+
+        <button id="themeToggle" class="navbtn ghost" type="button">🌙</button>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+      <h1 class="hero-title">Gaming + jídlo přímo do zóny</h1>
+      <p class="hero-sub">
+        Rezervuj PC/PS/VR, objednej jídlo a my ho připravíme a přineseme přímo k tvému místu.
+      </p>
+
+      <!-- KPIs -->
+      <div class="kpis">
+        <div class="kpi">
+          <div class="kpi-num" id="kpiBookings">0</div>
+          <div class="kpi-label">Rezervace celkem</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-num" id="kpiOrders">0</div>
+          <div class="kpi-label">Objednávky jídla</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-num">Praha 4</div>
+          <div class="kpi-label">Lokace (projekt)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- TOP DEALS -->
+    <div class="section-title">
+      <div class="flame">🔥</div>
+      <div>Top balíčky</div>
+    </div>
+
+    <div class="deals" id="dealsBox"></div>
+
+    <div class="divider"></div>
+
+    <!-- BOTTOM CARDS -->
+    <div class="bottom">
+      <div class="bigcard">
+        <div class="bigcard-title">🍜 Jídlo</div>
+        <div class="bigcard-sub">Ramen, gyoza, mini pizza, loaded fries…</div>
+        <a class="cta" href="menu.html">Otevřít menu</a>
+      </div>
+
+      <div class="bigcard">
+        <div class="bigcard-title">🗓️ Rezervace</div>
+        <div class="bigcard-sub">Vyber zónu, čas, balíček a přidej jídlo do košíku.</div>
+        <a class="cta" href="booking.html">Rezervovat</a>
+      </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
   </div>
 
-  <div class="nav-actions">
-    <a class="navbtn" href="index.html" data-i18n="home">Home</a>
-    <a class="navbtn" href="menu.html" data-i18n="menu">Menu</a>
-    <a class="navbtn" href="booking.html" data-i18n="booking">Rezervace</a>
-    <a class="navbtn" href="admin.html" data-i18n="admin">Admin</a>
-
-    <span class="pill" data-cart-badge>Košík: 0</span>
-
-    <select id="langSelect" class="select">
-      <option value="cs">CZ</option>
-      <option value="en">EN</option>
-      <option value="uk">UA</option>
-      <option value="vi">VI</option>
-    </select>
-
-    <button id="themeToggle" class="navbtn ghost" type="button">🌙</button>
-  </div>
-</div>
+  <script src="app.js"></script>
+</body>
+</html>
