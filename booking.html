@@ -15,7 +15,7 @@
     <div class="nav">
       <div class="left">
         <div style="font-weight:900">📅 <span data-i18n="booking">Rezervace</span></div>
-        <div class="badge">PC / PS / VR (projekt)</div>
+        <div class="badge">PC / PS / VR</div>
       </div>
 
       <div class="links">
@@ -38,11 +38,87 @@
     </div>
 
     <h1 class="h1" data-i18n="booking">Rezervace</h1>
-    <p class="p">Tady můžeš později přidat formulář rezervace. Košík už funguje na stránce Menu.</p>
+    <p class="p">Vyber zónu, čas, balíček a jídlo z košíku přineseme do zóny.</p>
 
-    <div class="card">
-      <p class="p"><b>Tip:</b> Nejdřív přidej jídlo do košíku v Menu, potom můžeš udělat rezervaci.</p>
-      <a class="btn" href="menu.html">Přidat jídlo</a>
+    <div class="grid cols-2">
+
+      <div class="card">
+        <h2 style="margin-top:0">👤 Kontakt</h2>
+
+        <div class="hr"></div>
+
+        <label class="small">Jméno</label>
+        <input class="input" id="nameInput" placeholder="např. Milan">
+
+        <div style="height:10px"></div>
+
+        <label class="small">Email</label>
+        <input class="input" id="emailInput" placeholder="např. milan@email.cz">
+
+        <div class="hr"></div>
+
+        <h2 style="margin-top:0">🎮 Zóna</h2>
+
+        <label class="small">Typ zóny</label>
+        <select class="input" id="zoneType"></select>
+
+        <div style="height:10px"></div>
+
+        <label class="small">Číslo místa</label>
+        <select class="input" id="zoneNumber"></select>
+
+        <div class="hr"></div>
+
+        <h2 style="margin-top:0">⏰ Čas</h2>
+
+        <label class="small">Datum</label>
+        <input class="input" id="dateInput" type="date">
+
+        <div style="height:10px"></div>
+
+        <label class="small">Čas</label>
+        <input class="input" id="timeInput" type="time">
+
+        <div class="hr"></div>
+
+        <h2 style="margin-top:0">💎 Balíček</h2>
+
+        <select class="input" id="dealSelect"></select>
+        <div class="small">Tip: balíček musí sedět s typem zóny (PC/PS/VR).</div>
+
+        <div class="hr"></div>
+
+        <h2 style="margin-top:0">🍜 Jídlo do zóny</h2>
+        <input class="input" id="notesInput" value="Jídlo připravíme a přineseme do zóny.">
+
+        <div class="hr"></div>
+
+        <button class="btn" id="submitBookingBtn" type="button">Vytvořit rezervaci</button>
+
+        <div id="toast" class="toast"></div>
+      </div>
+
+      <div class="card">
+        <h2 style="margin-top:0">🧾 Košík (půjde do rezervace)</h2>
+
+        <div class="row">
+          <a class="btn secondary" href="menu.html">Přidat jídlo</a>
+          <button class="btn secondary" id="clearCartBtn" type="button">Vyčistit košík</button>
+        </div>
+
+        <div class="hr"></div>
+
+        <div id="cartList"></div>
+
+        <div class="hr"></div>
+
+        <div class="row" style="justify-content:space-between">
+          <div class="price">Celkem:</div>
+          <div class="price" id="cartTotal">0 Kč</div>
+        </div>
+
+      </div>
+
     </div>
 
   </div>
