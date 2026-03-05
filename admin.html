@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Admin • Herní Kavárna Praha 4</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body data-page="admin">
+  <div class="container">
+    <div class="nav">
+      <div class="left">
+        <div style="font-weight:900">🛠 Admin</div>
+        <div class="badge">Zobrazení rezervací (projekt)</div>
+      </div>
+      <div class="links">
+        <a class="btn secondary" href="index.html">Home</a>
+        <a class="btn secondary" href="menu.html">Menu</a>
+        <a class="btn secondary" href="booking.html">Rezervace</a>
+        <a class="btn secondary" href="admin.html">Admin</a>
+        <span class="badge" data-cart-badge>Košík: 0</span>
+      </div>
+    </div>
+
+    <h1 class="h1">Rezervace a objednávky</h1>
+    <p class="p">Tahle stránka ukazuje všechny rezervace a jídlo, které má být přineseno do zóny.</p>
+
+    <div class="kpi">
+      <div class="k"><div class="n" id="adminK1">0</div><div class="t">Rezervace celkem</div></div>
+      <div class="k"><div class="n" id="adminK2">0</div><div class="t">PC rezervace</div></div>
+      <div class="k"><div class="n" id="adminK3">0</div><div class="t">S jídlem</div></div>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="card">
+      <div class="row" style="justify-content:space-between">
+        <div>
+          <div class="title">Seznam rezervací</div>
+          <div class="small">Ukládá se v prohlížeči (localStorage) – pro školní projekt.</div>
+        </div>
+        <button class="btn secondary" id="wipeBtn">Smazat vše</button>
+      </div>
+
+      <div class="hr"></div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Zákazník</th>
+            <th>Zóna</th>
+            <th>Čas</th>
+            <th>Balíček</th>
+            <th>Jídlo</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="adminBody"></tbody>
+      </table>
+    </div>
+
+    <div id="toast" class="toast" style="display:none"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
