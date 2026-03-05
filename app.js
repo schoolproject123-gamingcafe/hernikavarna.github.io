@@ -11,11 +11,11 @@ const I18N = {
 };
 
 const DEALS = [
-  { id:"pc1h", title:"PC 1 hodina", type:"PC", durationMin:60,  price:80 },
-  { id:"pc5h", title:"PC Maraton 5h", type:"PC", durationMin:300, price:300 },
-  { id:"pcNight", title:"Noční pařba (22:00–06:00)", type:"PC", durationMin:480, price:400 },
-  { id:"ps1h", title:"PlayStation 1 hodina", type:"PS", durationMin:60, price:100 },
-  { id:"vr30", title:"VR Session 30 min", type:"VR", durationMin:30, price:150 }
+  { id:"pc1h", title:"PC 1 hodina", type:"PC", durationMin:60,  price:80,  desc:"Rychlá hra – ideální na pár zápasů." },
+  { id:"pc5h", title:"PC Maraton 5h", type:"PC", durationMin:300, price:300, desc:"Hraj dlouho, hraj naplno." },
+  { id:"pcNight", title:"Noční pařba (22:00–06:00)", type:"PC", durationMin:480, price:400, desc:"Celá noc paření." },
+  { id:"ps1h", title:"PlayStation 1 hodina", type:"PS", durationMin:60, price:100, desc:"Pohodový couch gaming." },
+  { id:"vr30", title:"VR Session 30 min", type:"VR", durationMin:30, price:150, desc:"Rychlý VR zážitek." }
 ];
 
 function $(id){ return document.getElementById(id); }
@@ -107,6 +107,32 @@ function updateCartBadge(){
   const cart = loadCart();
   const count = cart.reduce((s,x)=> s + x.qty, 0);
   badge.textContent = `${t("cart")}: ${count}`;
+}
+/* ---------- Start ---------- */
+function initHomePage(){
+  // KPI counts from bookings
+  const bookings = loadBookings();
+  const totalBookings = bookings.length;
+  const totalFoodOrders = bookings.filter(b => (b.order?.items?.length || 0) > 0).length;
+
+  const k1 = document.getElementById("kpiBookings");
+  const k2 = document.getElementById("kpiOrders");
+  if(k1) k1.textContent = totalBookings;
+  if(k2) k2.textContent = totalFoodOrders;
+
+  // Render deals like the screenshot
+  const box = document.getElementById("dealsBox");
+  if(box){
+    box.innerHTML = DEALS.slice(0,4).map(d => `
+      <div class="item">
+        <div>
+          <div style="font-weight:900">${d.title}</div>
+          <div class="small">${d.type} • ${d.durationMin} min • ${d.desc}</div>
+        </div>
+        <div class="price">${money(d.price)}</div>
+      </div>
+    `).join("");
+  }
 }
 
 function renderCart(){
