@@ -253,3 +253,138 @@ label.small{ display:block; margin:10px 0 6px; }
   .nav-actions{ flex-wrap:wrap; }
   .select{ max-width:120px; }
 }
+/* =========================
+   HOME PAGE “BUBBLES” (cards)
+   paste at END of style.css
+   ========================= */
+
+/* hero spacing */
+.hero{ margin-top:22px; }
+.hero-title{
+  margin:0;
+  font-size:46px;
+  font-weight:900;
+  letter-spacing:-.5px;
+}
+.hero-sub{
+  margin:8px 0 0;
+  color:var(--muted);
+  max-width:70ch;
+  line-height:1.5;
+}
+
+/* KPI bubbles (3 cards under title) */
+.kpis{
+  margin-top:18px;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:14px;
+}
+.kpi{
+  padding:16px;
+  border-radius:16px;
+  background:var(--card);
+  border:1px solid var(--stroke);
+  box-shadow:var(--shadow);
+}
+.kpi-num{
+  font-size:26px;
+  font-weight:900;
+}
+.kpi-label{
+  margin-top:4px;
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* section title “🔥 Top balíčky” */
+.section-title{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:22px;
+  font-weight:900;
+  margin:0 0 12px;
+}
+.flame{
+  width:30px;height:30px;
+  display:grid;place-items:center;
+  border-radius:12px;
+  background:rgba(255,120,60,.10);
+  border:1px solid var(--stroke);
+}
+
+/* deals grid (4 bubbles, 2 columns) */
+.deals{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+.deal{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+  padding:16px;
+  border-radius:16px;
+  background:var(--card);
+  border:1px solid var(--stroke);
+  box-shadow:var(--shadow);
+}
+.deal-title{ font-weight:900; }
+.deal-sub{ margin-top:4px; font-size:12px; color:var(--muted); }
+.deal-price{ font-weight:900; font-size:16px; white-space:nowrap; }
+
+/* bottom 2 big bubbles */
+.bottom{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+.bigcard{
+  padding:18px;
+  border-radius:18px;
+  background:var(--card);
+  border:1px solid var(--stroke);
+  box-shadow:var(--shadow);
+}
+.bigcard-title{
+  font-size:22px;
+  font-weight:900;
+}
+.bigcard-sub{
+  margin-top:6px;
+  color:var(--muted);
+}
+
+/* button bubble */
+.cta{
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 14px;
+  border-radius:14px;
+  border:1px solid var(--stroke);
+  background:rgba(255,255,255,.03);
+  color:var(--text);
+  text-decoration:none;
+  font-weight:900;
+}
+.cta:hover{
+  transform:translateY(-1px);
+  box-shadow:var(--shadow);
+}
+
+/* divider line */
+.divider{
+  margin:18px 0;
+  height:1px;
+  background:var(--stroke);
+}
+
+/* responsive */
+@media (max-width:900px){
+  .kpis{ grid-template-columns:1fr; }
+  .deals{ grid-template-columns:1fr; }
+  .bottom{ grid-template-columns:1fr; }
+  .hero-title{ font-size:36px; }
+}
