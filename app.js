@@ -155,9 +155,9 @@ function renderCart(){
         <div class="small">${money(it.price)} • x${it.qty}</div>
       </div>
       <div class="row" style="justify-content:flex-end">
-        <button class="btn secondary" data-act="minus" data-id="${it.id}">-</button>
-        <button class="btn secondary" data-act="plus" data-id="${it.id}">+</button>
-        <button class="btn secondary" data-act="remove" data-id="${it.id}">✕</button>
+         <button class="iconbtn" data-act="minus"
+<button class="iconbtn" data-act="plus"
+<button class="iconbtn" data-act="remove"
       </div>
     </div>
   `).join("");
