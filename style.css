@@ -1,35 +1,45 @@
-.deals{
-  display:grid;
-  grid-template-columns:repeat(2, 1fr);
-  gap:14px;
-}
+<div class="card">
 
-.deal{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+<div class="section-title">
+🔥 Top balíčky
+</div>
 
-  padding:16px 18px;
+<div class="divider"></div>
 
-  border-radius:16px;
-  border:1px solid var(--stroke);
+<div class="deals">
 
-  background:var(--card);
+<div class="deal">
+<div>
+<div class="deal-title">PC 1 hodina</div>
+<div class="deal-sub">PC • 60 min • Rychlá hra – ideální na pár zápasů.</div>
+</div>
+<div class="deal-price">80 Kč</div>
+</div>
 
-  box-shadow:var(--shadow);
-}
+<div class="deal">
+<div>
+<div class="deal-title">PC Maraton 5h</div>
+<div class="deal-sub">PC • 300 min • Hraj dlouho, hraj naplno.</div>
+</div>
+<div class="deal-price">300 Kč</div>
+</div>
 
-.deal-title{
-  font-weight:900;
-}
+<div class="deal">
+<div>
+<div class="deal-title">Noční pařba (22:00–06:00)</div>
+<div class="deal-sub">PC • 480 min • Celá noc paření.</div>
+</div>
+<div class="deal-price">400 Kč</div>
+</div>
 
-.deal-sub{
-  margin-top:4px;
-  font-size:12px;
-  color:var(--muted);
-}
+<div class="deal">
+<div>
+<div class="deal-title">PlayStation 1 hodina</div>
+<div class="deal-sub">PS • 60 min • Pohodový couch gaming.</div>
+</div>
+<div class="deal-price">100 Kč</div>
+</div>
 
-.deal-price{
-  font-weight:900;
-  white-space:nowrap;
-}
+</div>
+
+</div>
