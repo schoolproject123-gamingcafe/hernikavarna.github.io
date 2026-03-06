@@ -1,133 +1,35 @@
-<!doctype html>
-<html lang="cs">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Herní Kavárna Praha 4</title>
+<div class="deals">
 
-  <link id="favicon" rel="icon" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css"/>
-</head>
-
-<body data-page="home">
-  <div class="bg"></div>
-
-  <div class="container">
-
-    <!-- TOPBAR -->
-    <div class="topbar">
-      <div class="brand">
-        <div class="brand-icon">🎮</div>
-        <div class="brand-name">Herní Kavárna Praha 4</div>
-        <div class="pill">8× PC • 2× PS • 2× VR</div>
-      </div>
-
-      <div class="nav-actions">
-        <a class="navbtn" href="index.html">Home</a>
-        <a class="navbtn" href="menu.html">Menu</a>
-        <a class="navbtn" href="booking.html">Rezervace</a>
-        <a class="navbtn" href="admin.html">Admin</a>
-
-        <span class="pill" data-cart-badge>Košík: 0</span>
-
-        <select id="langSelect" class="select">
-          <option value="cs">CZ</option>
-          <option value="en">EN</option>
-          <option value="uk">UA</option>
-          <option value="vi">VI</option>
-        </select>
-
-        <button id="themeToggle" class="navbtn ghost" type="button">🌙</button>
-      </div>
-    </div>
-
-    <!-- HERO BUBBLE -->
-    <div class="card" style="margin-top:18px">
-      <h1 class="h1" style="margin:0 0 8px;">Gaming + jídlo přímo do zóny</h1>
-      <p class="p" style="margin:0;">
-        Rezervuj PC/PS/VR, objednej jídlo a my ho připravíme a přineseme přímo k tvému místu.
-      </p>
-
-      <div class="hr"></div>
-
-      <!-- KPI bubbles inside hero bubble -->
-      <div class="grid" style="grid-template-columns:repeat(3,1fr); gap:14px;">
-        <div class="card" style="padding:14px; box-shadow:none;">
-          <div style="font-size:26px; font-weight:900" id="kpiBookings">0</div>
-          <div class="small">Rezervace celkem</div>
-        </div>
-
-        <div class="card" style="padding:14px; box-shadow:none;">
-          <div style="font-size:26px; font-weight:900" id="kpiOrders">0</div>
-          <div class="small">Objednávky jídla</div>
-        </div>
-
-        <div class="card" style="padding:14px; box-shadow:none;">
-          <div style="font-size:26px; font-weight:900">Praha 4</div>
-          <div class="small">Lokace (projekt)</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TOP DEALS BUBBLE -->
-    <div class="card" style="margin-top:14px;">
-      <div style="display:flex; align-items:center; gap:10px; font-size:22px; font-weight:900;">
-        <span>🔥</span><span>Top balíčky</span>
-      </div>
-
-      <div class="hr"></div>
-
-      <!-- Deals go here (your system fills this box) -->
-     <div class="deals" id="dealsStatic">
-       <div class="deal">
-  <div>
-    <div class="deal-title">PC 1 hodina</div>
-    <div class="deal-sub">PC • 60 min • Rychlá hra – ideální na pár zápasů.</div>
-  </div>
-  <div class="deal-price">80 Kč</div>
+<div class="deal">
+<div>
+<div class="deal-title">PC 1 hodina</div>
+<div class="deal-sub">PC • 60 min • Rychlá hra – ideální na pár zápasů.</div>
+</div>
+<div class="deal-price">80 Kč</div>
 </div>
 
 <div class="deal">
-  <div>
-    <div class="deal-title">PC Maraton 5h</div>
-    <div class="deal-sub">PC • 300 min • Hraj dlouho, hraj naplno.</div>
-  </div>
-  <div class="deal-price">300 Kč</div>
+<div>
+<div class="deal-title">PC Maraton 5h</div>
+<div class="deal-sub">PC • 300 min • Hraj dlouho, hraj naplno.</div>
+</div>
+<div class="deal-price">300 Kč</div>
 </div>
 
 <div class="deal">
-  <div>
-    <div class="deal-title">Noční pařba (22:00–06:00)</div>
-    <div class="deal-sub">PC • 480 min • Celá noc paření.</div>
-  </div>
-  <div class="deal-price">400 Kč</div>
+<div>
+<div class="deal-title">Noční pařba (22:00–06:00)</div>
+<div class="deal-sub">PC • 480 min • Celá noc paření.</div>
+</div>
+<div class="deal-price">400 Kč</div>
 </div>
 
 <div class="deal">
-  <div>
-    <div class="deal-title">PlayStation 1 hodina</div>
-    <div class="deal-sub">PS • 60 min • Pohodový couch gaming.</div>
-  </div>
-  <div class="deal-price">100 Kč</div>
+<div>
+<div class="deal-title">PlayStation 1 hodina</div>
+<div class="deal-sub">PS • 60 min • Pohodový couch gaming.</div>
+</div>
+<div class="deal-price">100 Kč</div>
 </div>
 
-    <!-- BOTTOM BUBBLES -->
-    <div class="grid cols-2" style="margin-top:14px;">
-      <div class="card">
-        <h2 style="margin:0 0 6px; font-weight:900;">🍜 Jídlo</h2>
-        <p class="p" style="margin:0 0 12px;">Ramen, gyoza, mini pizza, loaded fries...</p>
-        <a class="btn" href="menu.html">Otevřít menu</a>
-      </div>
-
-      <div class="card">
-        <h2 style="margin:0 0 6px; font-weight:900;">🗓️ Rezervace</h2>
-        <p class="p" style="margin:0 0 12px;">Vyber zónu, čas, balíček a přidej jídlo do košíku.</p>
-        <a class="btn" href="booking.html">Rezervovat</a>
-      </div>
-    </div>
-
-  </div>
-
-  <script src="app.js"></script>
-</body>
-</html>
+</div>
