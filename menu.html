@@ -10,12 +10,12 @@
 
 <body data-page="menu">
   <div class="bg"></div>
-  <div class="container">
 
+  <div class="container">
     <div class="topbar">
       <div class="brand">
         <div class="brand-icon">🍜</div>
-        <div class="brand-name" data-i18n="menu">Menu</div>
+        <div class="brand-name">Menu</div>
         <div class="pill">Objednávka půjde do rezervace</div>
       </div>
 
@@ -38,183 +38,31 @@
       </div>
     </div>
 
-    <h1 class="h1" data-i18n="menu">Menu</h1>
-    <div class="card">
-
-<div class="row">
-
-<input
-  type="text"
-  class="input"
-  placeholder="🔎 Hledat jídlo..."
->
-
-<select class="input" style="max-width:200px">
-  <option>Vše</option>
-  <option>Japonské jídlo</option>
-  <option>Snacks</option>
-  <option>Nápoje</option>
-  <option>Sladké</option>
-</select>
-
-</div>
-
-</div>
+    <h1 class="h1">Menu</h1>
     <p class="p">Vyber jídlo, přidej do košíku a potom udělej rezervaci (přineseme do zóny).</p>
 
     <div class="grid cols-2">
       <div class="card">
-        <h2 style="margin:0 0 8px">🍱 Položky</h2>
-        <div class="hr"></div>
-        <div class="grid" id="menuList"></div>
-        <!-- JAPANESE FOOD -->
-<div class="card">
-
-<h2>🍜 Japonské jídlo</h2>
-
-<div class="item">
-<div>
-<b>Tonkotsu Ramen</b>
-<div class="small">Vepřový vývar, nudle, vejce</div>
-</div>
-<div class="price">159 Kč</div>
-</div>
-
-<div class="item">
-<div>
-<b>Miso Ramen</b>
-<div class="small">Miso vývar, tofu, nudle</div>
-</div>
-<div class="price">149 Kč</div>
-</div>
-
-<div class="item">
-<div>
-<b>Gyoza (6 ks)</b>
-<div class="small">Japonské knedlíčky</div>
-</div>
-<div class="price">119 Kč</div>
-</div>
-
-<div class="item">
-<div>
-<b>Chicken Teriyaki Bowl</b>
-<div class="small">Rýže, kuře, teriyaki omáčka</div>
-</div>
-<div class="price">169 Kč</div>
-</div>
-
-</div>
-
-
-<!-- SNACKS -->
-<div class="card">
-
-<h2>🍟 Snacks</h2>
-
-<div class="item">
-<div>
-<b>Mini Pizza</b>
-<div class="small">cca 10 cm</div>
-</div>
-<div class="price">89 Kč</div>
-</div>
-
-<div class="item">
-<div>
-<b>Loaded Fries</b>
-<div class="small">sýrová omáčka</div>
-</div>
-<div class="price">109 Kč</div>
-</div>
-
-<div class="item">
-<div>
-<b>Chicken Nuggets</b>
-<div class="small">8 ks</div>
-</div>
-<div class="price">109 Kč</div>
-</div>
-
-<div class="item">
-<div>
-<b>Nachos + dip</b>
-<div class="small">salsa / cheese</div>
-</div>
-<div class="price">99 Kč</div>
-</div>
-
-</div>
-
-
-<!-- DRINKS -->
-<div class="card">
-
-<h2>🥤 Nápoje</h2>
-
-<div class="item">
-<div><b>Coca-Cola</b></div>
-<div class="price">39 Kč</div>
-</div>
-
-<div class="item">
-<div><b>Sprite</b></div>
-<div class="price">39 Kč</div>
-</div>
-
-<div class="item">
-<div><b>Fanta</b></div>
-<div class="price">39 Kč</div>
-</div>
-
-<div class="item">
-<div><b>Energy Drink</b></div>
-<div class="price">59 Kč</div>
-</div>
-
-<div class="item">
-<div><b>Iced Tea</b></div>
-<div class="price">45 Kč</div>
-</div>
-
-</div>
-
-
-<!-- SWEETS -->
-<div class="card">
-
-<h2>🍰 Sladké</h2>
-
-<div class="item">
-<div><b>Mochi</b></div>
-<div class="price">79 Kč</div>
-</div>
-
-<div class="item">
-<div><b>Chocolate Brownie</b></div>
-<div class="price">69 Kč</div>
-</div>
-
-<div class="item">
-<div><b>Donut</b></div>
-<div class="price">49 Kč</div>
-</div>
-
-</div>
+        <h2 class="section-subtitle">🍱 Položky</h2>
+        <div class="divider"></div>
+        <div id="menuList"></div>
       </div>
 
       <div class="card">
-        <h2 style="margin:0 0 8px">🧾 <span data-i18n="cart">Košík</span></h2>
+        <h2 class="section-subtitle">🧾 Košík</h2>
+
         <div class="row">
           <a class="btn" href="booking.html" data-i18n="goBooking">Přejít na rezervaci</a>
           <button class="btn secondary" id="clearCartBtn" type="button" data-i18n="clearCart">Vyčistit košík</button>
         </div>
 
-        <div class="hr"></div>
+        <div class="divider"></div>
+
         <div id="cartList"></div>
 
-        <div class="hr"></div>
-        <div class="row" style="justify-content:space-between">
+        <div class="divider"></div>
+
+        <div class="row between">
           <div class="price" data-i18n="total">Celkem:</div>
           <div class="price" id="cartTotal">0 Kč</div>
         </div>
