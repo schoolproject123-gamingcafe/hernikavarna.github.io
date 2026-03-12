@@ -10,12 +10,12 @@
 
 <body data-page="booking">
   <div class="bg"></div>
-  <div class="container">
 
+  <div class="container">
     <div class="topbar">
       <div class="brand">
         <div class="brand-icon">🗓️</div>
-        <div class="brand-name" data-i18n="booking">Rezervace</div>
+        <div class="brand-name">Rezervace</div>
         <div class="pill">PC/PS/VR + jídlo do zóny</div>
       </div>
 
@@ -38,14 +38,12 @@
       </div>
     </div>
 
-    <h1 class="h1" data-i18n="booking">Rezervace</h1>
+    <h1 class="h1">Rezervace</h1>
     <p class="p">Vyber zónu a čas. Jídlo z košíku připravíme a přineseme přímo do tvé zóny.</p>
 
     <div class="grid cols-2">
-
-      <!-- LEFT: FORM -->
       <div class="card">
-        <h2 style="margin:0 0 8px">👤 Kontakt</h2>
+        <h2 class="section-subtitle">👤 Kontakt</h2>
 
         <label class="small">Jméno</label>
         <input class="input" id="nameInput" placeholder="např. Milan">
@@ -56,9 +54,9 @@
         <label class="small">Telefon (volitelné)</label>
         <input class="input" id="phoneInput" placeholder="+420 ...">
 
-        <div class="hr"></div>
+        <div class="divider"></div>
 
-        <h2 style="margin:0 0 8px">🎮 Zóna</h2>
+        <h2 class="section-subtitle">🎮 Zóna</h2>
 
         <label class="small">Typ zóny</label>
         <select class="input" id="zoneType"></select>
@@ -66,52 +64,46 @@
         <label class="small">Číslo</label>
         <select class="input" id="zoneNumber"></select>
 
-        <div class="hr"></div>
-
         <label class="small">Datum</label>
         <input class="input" id="dateInput" type="date">
 
         <label class="small">Čas</label>
         <input class="input" id="timeInput" type="time">
 
-        <div class="hr"></div>
+        <div class="divider"></div>
 
-        <h2 style="margin:0 0 8px">💎 Balíček (dealy)</h2>
+        <label class="small">Balíček (dealy)</label>
         <select class="input" id="dealSelect"></select>
         <div class="small">Bez balíčku = default 60 minut.</div>
-
-        <div class="hr"></div>
 
         <label class="small">Poznámka (jídlo do zóny)</label>
         <input class="input" id="notesInput" value="Jídlo připravíme a přineseme přímo do zóny.">
 
-        <div class="hr"></div>
+        <div class="divider"></div>
 
         <button class="btn" id="submitBookingBtn" type="button">Vytvořit rezervaci</button>
         <div id="toast" class="toast"></div>
       </div>
 
-      <!-- RIGHT: CART -->
       <div class="card">
-        <h2 style="margin:0 0 8px">🧾 Košík (půjde do rezervace)</h2>
+        <h2 class="section-subtitle">🧾 Košík (půjde do rezervace)</h2>
 
         <div class="row">
           <a class="btn secondary" href="menu.html">Přidat jídlo</a>
           <button class="btn secondary" id="clearCartBtn" type="button">Vyčistit košík</button>
         </div>
 
-        <div class="hr"></div>
+        <div class="divider"></div>
 
         <div id="cartList"></div>
 
-        <div class="hr"></div>
+        <div class="divider"></div>
 
-        <div class="row" style="justify-content:space-between">
+        <div class="row between">
           <div class="price">Jídlo celkem:</div>
           <div class="price" id="cartTotal">0 Kč</div>
         </div>
       </div>
-
     </div>
   </div>
 
