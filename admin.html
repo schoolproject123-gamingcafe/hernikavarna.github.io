@@ -4,60 +4,61 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Admin • Herní Kavárna Praha 4</title>
-
   <link id="favicon" rel="icon" type="image/svg+xml">
   <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body data-page="admin">
-  <div class="container">
+  <div class="bg"></div>
 
-    <div class="nav">
-      <div class="left">
-        <div style="font-weight:900">🛠 <span data-i18n="admin">Admin</span></div>
-        <div class="badge">Rezervace + jídlo</div>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <div class="brand-icon">🛠️</div>
+        <div class="brand-name">Admin</div>
+        <div class="pill">Rezervace + objednávky</div>
       </div>
 
-      <div class="links">
-        <a class="btn secondary" href="index.html" data-i18n="home">Home</a>
-        <a class="btn secondary" href="menu.html" data-i18n="menu">Menu</a>
-        <a class="btn secondary" href="booking.html" data-i18n="booking">Rezervace</a>
-        <a class="btn secondary" href="admin.html" data-i18n="admin">Admin</a>
+      <div class="nav-actions">
+        <a class="navbtn" href="index.html" data-i18n="home">Home</a>
+        <a class="navbtn" href="menu.html" data-i18n="menu">Menu</a>
+        <a class="navbtn" href="booking.html" data-i18n="booking">Rezervace</a>
+        <a class="navbtn" href="admin.html" data-i18n="admin">Admin</a>
 
-        <span class="badge" data-cart-badge>Košík: 0</span>
+        <span class="pill" data-cart-badge>Košík: 0</span>
 
-        <select id="langSelect" class="input" style="width:auto; padding:8px 10px">
+        <select id="langSelect" class="select">
           <option value="cs">CZ</option>
           <option value="en">EN</option>
           <option value="uk">UA</option>
           <option value="vi">VI</option>
         </select>
 
-        <button id="themeToggle" class="btn secondary" type="button">🌙</button>
+        <button id="themeToggle" class="navbtn ghost" type="button">🌙</button>
       </div>
     </div>
 
-    <h1 class="h1" data-i18n="admin">Admin</h1>
-    <p class="p">Tady vidíš všechny rezervace a co má být přineseno do zóny.</p>
+    <h1 class="h1">Admin</h1>
+    <p class="p">Tady uvidíš rezervace a objednávky jídla.</p>
 
     <div class="card">
-      <div class="row" style="justify-content:space-between">
-        <b>Seznam rezervací</b>
+      <div class="row between">
+        <h2 class="section-subtitle" style="margin:0;">📋 Seznam rezervací</h2>
         <button class="btn secondary" id="wipeBookingsBtn" type="button">Smazat vše</button>
       </div>
 
-      <div class="hr"></div>
+      <div class="divider"></div>
 
-      <div style="overflow:auto">
-        <table style="width:100%; border-collapse:collapse">
+      <div class="table-wrap">
+        <table class="admin-table">
           <thead>
             <tr>
-              <th style="text-align:left; padding:8px; border-bottom:1px solid var(--border)">Zákazník</th>
-              <th style="text-align:left; padding:8px; border-bottom:1px solid var(--border)">Zóna</th>
-              <th style="text-align:left; padding:8px; border-bottom:1px solid var(--border)">Čas</th>
-              <th style="text-align:left; padding:8px; border-bottom:1px solid var(--border)">Balíček</th>
-              <th style="text-align:left; padding:8px; border-bottom:1px solid var(--border)">Jídlo</th>
-              <th style="text-align:left; padding:8px; border-bottom:1px solid var(--border)">Status</th>
+              <th>Zákazník</th>
+              <th>Zóna</th>
+              <th>Čas</th>
+              <th>Balíček</th>
+              <th>Jídlo</th>
+              <th>Status</th>
             </tr>
           </thead>
           <tbody id="adminBody"></tbody>
@@ -66,7 +67,6 @@
 
       <div id="toast" class="toast"></div>
     </div>
-
   </div>
 
   <script src="app.js"></script>
